@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W3b1qYua8qGERRwTrpjObKU7SheOoEHKs6AASTL8hJpE0S39k/ALQ4pz+cvot+d3HKy0hgtVqmsAKPcA9hthtQ==",
+  "dgSpecHash": "Nu+87fry9SpegpsoQcWGo26epoB/Jf84gJvKIdcWfYjdlGdHnTdqdedfpDYpr9Q/70+LxmPfTLVUB/m8kGcG2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\death\\source\\repos\\ScaleableTV\\ScaleableTV.csproj",
+  "projectFilePath": "C:\\Users\\death\\source\\repos\\ScaleableTelevision\\ScaleableTV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\death\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
     "C:\\Users\\death\\.nuget\\packages\\bepinex.assemblypublicizer.msbuild\\0.4.1\\bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512",

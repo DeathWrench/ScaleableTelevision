@@ -32,9 +32,6 @@
       <HintPath>$(LethalCompanyPath)\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
     </Reference>
-	  <Reference Include="ModelReplacementAPI">
-		  <HintPath>.\ModelReplacementAPI.dll</HintPath>
-	  </Reference>
     <Reference Include="Unity.InputSystem">
       <HintPath>$(LethalCompanyPath)\Lethal Company_Data\Managed\Unity.InputSystem.dll</HintPath>
     </Reference>
@@ -51,5 +48,7 @@
 
    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="copy /Y &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(ProjDir)Build&quot;  &#xD;&#xA;" />
+	<Exec Command="copy /Y &quot;$(ProjDir)README.md&quot; &quot;$(ProjDir)Build&quot;  &#xD;&#xA;" />
+	<Exec Command="copy /Y &quot;$(ProjDir)CHANGELOG.md&quot; &quot;$(ProjDir)Build&quot;  &#xD;&#xA;" />
   </Target>
 </Project>

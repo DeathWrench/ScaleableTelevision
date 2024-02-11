@@ -6,12 +6,11 @@ using BepInEx.Configuration;
 
 namespace ScaleableTV
 {
-    [BepInPlugin("ScaleableTV", "ScaleableTelevision", "1.0.0")]
+    [BepInPlugin("ScaleableTV", "ScaleableTelevision", "1.0.1")]
     [HarmonyPatch]
     public class ScaleableTelevision : BaseUnityPlugin
     {
-        static new GameObject gameObject;
-        static GameObject tvMesh = null;
+        static new GameObject? gameObject;
         void Awake()
         {
             ConfigManager.Init(Config);
@@ -35,10 +34,16 @@ namespace ScaleableTV
             [HarmonyPostfix]
             public static void PostFix_adjustTVScale(GameObject __instance)
             {
-                tvMesh = __instance;
                 GameObject TelevisionContainer = __instance.gameObject.transform.parent.gameObject;
                 TelevisionContainer.transform.localScale = new Vector3(ConfigManager.tvScaleX.Value, ConfigManager.tvScaleY.Value, ConfigManager.tvScaleZ.Value);
+                TelevisionContainer.transform.localPosition = new Vector3(1f, ConfigManager.tvPositionY.Value, 1f);
+                if (!ConfigManager.configBiggerInteractRadius.Value)
+                    return;
+                    GameObject Cube = __instance.gameObject.transform.gameObject;
+                    Cube.transform.localPosition = new Vector3(0.521f, 0.3f, -0.3f);
+                    Cube.transform.localScale = new Vector3(1f, 1.1f, 1f);
+                    //Cube.transform.Rotate(-180.0f, 0.0f, 90.0f, Space.World);
+                }
             }
         }
     }
-}

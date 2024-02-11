@@ -2778,11 +2778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\death\\source\\repos\\ScaleableTV\\ScaleableTV.csproj",
+      "projectUniqueName": "C:\\Users\\death\\Source\\Repos\\ScaleableTelevision\\ScaleableTV.csproj",
       "projectName": "ScaleableTV",
-      "projectPath": "C:\\Users\\death\\source\\repos\\ScaleableTV\\ScaleableTV.csproj",
+      "projectPath": "C:\\Users\\death\\Source\\Repos\\ScaleableTelevision\\ScaleableTV.csproj",
       "packagesPath": "C:\\Users\\death\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\death\\source\\repos\\ScaleableTV\\obj\\",
+      "outputPath": "C:\\Users\\death\\Source\\Repos\\ScaleableTelevision\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
