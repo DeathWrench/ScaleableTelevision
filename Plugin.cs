@@ -36,7 +36,7 @@ namespace ScaleableTV
             {
                 GameObject TelevisionContainer = __instance.gameObject.transform.parent.gameObject;
                 TelevisionContainer.transform.localScale = new Vector3(ConfigManager.tvScaleX.Value, ConfigManager.tvScaleY.Value, ConfigManager.tvScaleZ.Value);
-                TelevisionContainer.transform.localPosition = new Vector3(1f, ConfigManager.tvPositionY.Value, 1f);
+                //TelevisionContainer.transform.localPosition = new Vector3(1f, ConfigManager.tvPositionY.Value, 1f);
                 if (!ConfigManager.configBiggerInteractRadius.Value)
                     return;
                     GameObject Cube = __instance.gameObject.transform.gameObject;
