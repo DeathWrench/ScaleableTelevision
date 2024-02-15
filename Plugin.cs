@@ -24,6 +24,7 @@ namespace ScaleableTV
             {
         b
             });
+            if (!ConfigManager.tvLightEnabled.Value)
             __instance.tvLight.enabled = false;
         }
         void Update()
@@ -43,17 +44,20 @@ namespace ScaleableTV
             [HarmonyPostfix]
             public static void PostFix_adjustTVScale(GameObject __instance)
             {
-                GameObject TelevisionContainer = __instance.gameObject.transform.parent.gameObject;
-                TelevisionContainer.transform.localScale = new Vector3(ConfigManager.tvScaleX.Value, ConfigManager.tvScaleY.Value, ConfigManager.tvScaleZ.Value);
-                //TelevisionContainer.transform.localPosition = new Vector3(1f, ConfigManager.tvPositionY.Value, 1f);
+                if (ConfigManager.tvScaleX.Value != 1f && ConfigManager.tvScaleX.Value != 1f && ConfigManager.tvScaleZ.Value != 1f) // If all scales do not equal 1 then transform
+                {
+                    GameObject TelevisionContainer = __instance.gameObject.transform.parent.gameObject;
+                    TelevisionContainer.transform.localScale = new Vector3(ConfigManager.tvScaleX.Value, ConfigManager.tvScaleY.Value, ConfigManager.tvScaleZ.Value);
+                }
                 if (!ConfigManager.configBiggerInteractRadius.Value)
-                    return;
-                    GameObject Cube = __instance.gameObject.transform.gameObject;
-                    Cube.transform.localPosition = new Vector3(0.521f, 0.3f, -0.3f);
-                    Cube.transform.localScale = new Vector3(1f, 1.1f, 1f);
-                    //Cube.transform.Rotate(-180.0f, 0.0f, 90.0f, Space.World);
+                { return; }
+                else { 
+                        GameObject Cube = __instance.gameObject.transform.gameObject;
+                        Cube.transform.localPosition = new Vector3(0.521f, 0.3f, -0.3f);
+                        Cube.transform.localScale = new Vector3(1f, 1.1f, 1f);
+                     }
+                }
             }
-        }
         public Light tvLight;
     }
 }

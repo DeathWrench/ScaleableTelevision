@@ -1,3 +1,6 @@
+# v1.0.4
+- Added an option to toggle the TV Lights back on, in case the scale x, y and z of the television is set to 1.
+- 
 # v1.0.3
 - Disables TV lights to fix error logs
 
