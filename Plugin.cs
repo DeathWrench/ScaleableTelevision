@@ -17,6 +17,15 @@ namespace ScaleableTV
             Logger.LogInfo($"Plugin {"ScaleableTelevision"} is loaded!");
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
         }
+        public static void SetTVScreenMaterial(TVScript __instance, bool b)
+        {
+            MethodInfo method = __instance.GetType().GetMethod("SetTVScreenMaterial", BindingFlags.Instance | BindingFlags.NonPublic);
+            method.Invoke(__instance, new object[]
+            {
+        b
+            });
+            __instance.tvLight.enabled = false;
+        }
         void Update()
         {
             GameObject[] array = GameObject.FindGameObjectsWithTag("InteractTrigger");
@@ -43,7 +52,8 @@ namespace ScaleableTV
                     Cube.transform.localPosition = new Vector3(0.521f, 0.3f, -0.3f);
                     Cube.transform.localScale = new Vector3(1f, 1.1f, 1f);
                     //Cube.transform.Rotate(-180.0f, 0.0f, 90.0f, Space.World);
-                }
             }
         }
+        public Light tvLight;
     }
+}

@@ -1,3 +1,6 @@
+# v1.0.3
+- Disables TV lights to fix error logs
+
 # v1.0.2
 - Can no longer change the position of the TV as it didn't actually do anything.
 
