@@ -1,5 +1,5 @@
 # ScaleableTelevision
-Lethal Company mod to adjust the scale of the television through config...
+Lethal Company mod to adjust the scale of the television through config.
 The mod [LethalConfig](https://thunderstore.io/c/lethal-company/p/AinaVT/LethalConfig/) can adjust the values in game, and the settings will be applied in real time with no need to restart the game. 
 
 ## Features
