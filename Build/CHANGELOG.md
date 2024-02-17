@@ -1,6 +1,9 @@
+# v1.0.5
+- Update readme, to include BepInEx.cfg required change in order to get the mod to work properly. 
+
 # v1.0.4
 - Added an option to toggle the TV Lights back on, in case the scale x, y and z of the television is set to 1.
-- 
+
 # v1.0.3
 - Disables TV lights to fix error logs
 

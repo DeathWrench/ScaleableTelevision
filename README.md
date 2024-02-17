@@ -8,6 +8,9 @@ The mod [LethalConfig](https://thunderstore.io/c/lethal-company/p/AinaVT/LethalC
 
 The code may be sloppy because I don't know what I'm doing. If it wasn't for [CozyImprovements](https://thunderstore.io/c/lethal-company/p/Spyci/CozyImprovements/) I would've never figured out how to do this. Any contributions are welcome. 
 
+## Required to work
+- The line in BepinEX.cfg must be set as such: HideManagerGameObject = true
+
 ## Known Bug
 [issue with placing the TV when Y Scale is set higher than normal](https://github.com/DeathWrench/ScaleableTelevision/issues/1)
 
@@ -15,5 +18,6 @@ The code may be sloppy because I don't know what I'm doing. If it wasn't for [Co
 - [BestestTelevisionMod](https://thunderstore.io/c/lethal-company/p/DeathWrench/BestestTelevisionMod/)
 - [TVLoader](https://thunderstore.io/c/lethal-company/p/Rattenbonkers/TVLoader/)
 - [LethalTVManager](https://thunderstore.io/c/lethal-company/p/Bushwacc/LethalTVManager/)
+
 #### For volume controls:
 - [ObjectVolumeController](https://thunderstore.io/c/lethal-company/p/FlipMods/ObjectVolumeController/)

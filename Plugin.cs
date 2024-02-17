@@ -6,7 +6,7 @@ using BepInEx.Configuration;
 
 namespace ScaleableTV
 {
-    [BepInPlugin("ScaleableTV", "ScaleableTelevision", "1.0.2")]
+    [BepInPlugin("ScaleableTV", "ScaleableTelevision", "1.0.5")]
     [HarmonyPatch]
     public class ScaleableTelevision : BaseUnityPlugin
     {
