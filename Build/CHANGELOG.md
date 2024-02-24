@@ -1,3 +1,6 @@
+# v1.0.6
+- If TV Lights enabled do not scale the TV. 
+
 # v1.0.5
 - Update readme, to include BepInEx.cfg required change in order to get the mod to work properly. 
 
