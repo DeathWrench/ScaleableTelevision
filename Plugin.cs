@@ -48,6 +48,7 @@ namespace ScaleableTV
                 {
                     GameObject TelevisionContainer = __instance.gameObject.transform.parent.gameObject;
                     TelevisionContainer.transform.localScale = new Vector3(ConfigManager.tvScaleX.Value, ConfigManager.tvScaleY.Value, ConfigManager.tvScaleZ.Value);
+                    TelevisionContainer.transform.GetComponentInChildren<PlaceableShipObject>().yOffset = 0.52f * (ConfigManager.tvScaleY.Value - 1) + 0.52f;
                 }
                 if (!ConfigManager.configBiggerInteractRadius.Value)
                 { return; }
