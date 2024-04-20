@@ -1,6 +1,6 @@
 {
     "name": "ScaleableTelevision",
-    "version_number": "1.0.6",
+    "version_number": "1.0.8",
     "website_url": "https://github.com/DeathWrench/ScaleableTelevision",
     "description": "Lethal Company mod to adjust the scale of the television through config.",
     "dependencies": [

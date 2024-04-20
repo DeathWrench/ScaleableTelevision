@@ -1,3 +1,10 @@
+# v1.0.8
+- Thanks to [SeymourSchlong](https://github.com/SeymourSchlong) for fixing [#1](https://github.com/DeathWrench/ScaleableTelevision/issues/1) and helping with [#3](https://github.com/DeathWrench/ScaleableTelevision/issues/3)
+- Scale TelevisionMesh instead of TelevisionContainer and fix the interaction prompt.
+
+# v1.0.7
+- Remove TV Lights stuff.
+
 # v1.0.6
 - If TV Lights enabled do not scale the TV. 
 
