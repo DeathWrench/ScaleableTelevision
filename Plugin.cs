@@ -11,7 +11,7 @@ namespace DeathWrench.ScaleableTelevision
     {
         public const string PLUGIN_GUID = "DeathWrench.ScaleableTelevision";
         public const string PLUGIN_NAME = "\u200bScaleableTelevision";
-        public const string PLUGIN_VERSION = "1.0.9";
+        public const string PLUGIN_VERSION = "1.0.10";
         static new GameObject? gameObject;
         void Awake()
         {
@@ -53,13 +53,18 @@ namespace DeathWrench.ScaleableTelevision
                         0.01403493f,
                         0.03700018f
                     );
+                    cube.transform.localScale = new Vector3(
+                        ConfigManager.tvScaleY.Value * 0.2601791f,
+                        ConfigManager.tvScaleX.Value * 0.405167f,
+                        ConfigManager.tvScaleZ.Value * 0.1014986f
+                    );
                 }
                 else
                 {
-                    cube.transform.localPosition = new Vector3(0.3f, 0.521f, -0.3f);
+                    cube.transform.localPosition = new Vector3(0.521f, 0.3f, -0.3f);
                     cube.transform.localScale = new Vector3(
-                        ConfigManager.tvScaleY.Value * 1.1f, 
-                        ConfigManager.tvScaleX.Value * 1f, 
+                        ConfigManager.tvScaleY.Value * 1f, 
+                        ConfigManager.tvScaleX.Value * 1.1f, 
                         ConfigManager.tvScaleZ.Value * 1f
                     );
                 }
