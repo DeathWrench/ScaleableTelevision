@@ -2,19 +2,21 @@ using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 using System.Reflection;
-using BepInEx.Configuration;
 
-namespace ScaleableTV
+namespace DeathWrench.ScaleableTelevision
 {
-    [BepInPlugin("ScaleableTV", "\u200bScaleableTelevision", "1.0.8")]
+    [BepInPlugin($"{PLUGIN_GUID}", $"{PLUGIN_NAME}", $"{PLUGIN_VERSION}")]
     [HarmonyPatch]
     public class ScaleableTelevision : BaseUnityPlugin
     {
+        public const string PLUGIN_GUID = "DeathWrench.ScaleableTelevision";
+        public const string PLUGIN_NAME = "\u200bScaleableTelevision";
+        public const string PLUGIN_VERSION = "1.0.9";
         static new GameObject? gameObject;
         void Awake()
         {
             ConfigManager.Init(Config);
-            Logger.LogInfo($"Plugin {"ScaleableTelevision"} is loaded!");
+            Logger.LogInfo($"Plugin {PLUGIN_NAME} {PLUGIN_VERSION} is loaded!");
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
         }
         void Update()
@@ -40,7 +42,7 @@ namespace ScaleableTV
 
                 GameObject cube = televisionContainer.transform.Find("Cube").gameObject;
 
-                televisionContainer.transform.GetComponentInChildren<PlaceableShipObject>().yOffset = 0.52f * (ConfigManager.tvScaleX.Value - 1) + 0.52f;
+                televisionContainer.transform.GetComponentInChildren<PlaceableShipObject>().yOffset = 0.52f * (ConfigManager.tvScaleY.Value - 1);
                 if (!ConfigManager.configBiggerInteractRadius.Value)
                 {
                     float desiredValueAt1 = 0.3115522f;
