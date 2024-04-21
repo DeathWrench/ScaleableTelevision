@@ -2,6 +2,7 @@ using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 using System.Reflection;
+using UnityEngine.UIElements;
 
 namespace DeathWrench.ScaleableTelevision
 {
@@ -61,11 +62,20 @@ namespace DeathWrench.ScaleableTelevision
                 }
                 else
                 {
-                    cube.transform.localPosition = new Vector3(0.521f, 0.3f, -0.3f);
+                    float desiredPosXValueAt1 = 0.521f;
+                    float desiredPosYValueAt1 = 0.3f;
+                    //float desiredPosZValueAt1 = -0.3f;
+                    float desiredPosXValueAt4096 = -1625.286f;
+                    float desiredPosYValueAt4096 = 350.3f;
+                    //float desiredPosZValueAt4096 = -2.9475f;
+                    float desiredPosX = Mathf.Lerp(desiredPosXValueAt1, desiredPosXValueAt4096, (ConfigManager.tvScaleY.Value - 1f) / 4095f);
+                    float desiredPosY = Mathf.Lerp(desiredPosYValueAt1, desiredPosYValueAt4096, (ConfigManager.tvScaleX.Value - 1f) / 4095f);
+                    //float desiredPosZ = Mathf.Lerp(desiredPosZValueAt1, desiredPosZValueAt4096, (ConfigManager.tvScaleX.Value - 1f) / 4095f);
+                    cube.transform.localPosition = new Vector3(desiredPosX, desiredPosY, cube.transform.localPosition.z);
                     cube.transform.localScale = new Vector3(
                         ConfigManager.tvScaleY.Value * 1f, 
-                        ConfigManager.tvScaleX.Value * 1.1f, 
-                        ConfigManager.tvScaleZ.Value * 1f
+                        ConfigManager.tvScaleX.Value * 1.1f,
+                        1f
                     );
                 }
                 return;
