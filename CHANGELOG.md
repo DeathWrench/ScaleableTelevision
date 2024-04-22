@@ -1,3 +1,9 @@
+# v1.0.12
+-Revert scaling the TelevisionMesh since it's too much of a hassle fix everything else. Scales TelevisionContainer.
+
+# v1.0.11
+![Never released](https://raw.githubusercontent.com/DeathWrench/deathwrench.github.io/main/Junk/sussyfist.png)
+
 # v1.0.10
 - Fix more stuff
 

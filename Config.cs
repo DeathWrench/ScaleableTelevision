@@ -1,6 +1,6 @@
 using BepInEx.Configuration;
 
-namespace DeathWrench.ScaleableTelevision
+namespace ScaleableTV
 {
     public class ConfigManager
     {
@@ -21,9 +21,9 @@ namespace DeathWrench.ScaleableTelevision
         {
             configFile = cfg;
 
-            tvScaleX = cfg.Bind("Options", "TV Scale X", 4f, "X Coordinates\n Left/Right\n Make sure you put a ''f'' at the end of the number.");
-            tvScaleY = cfg.Bind("Options", "TV Scale Y", 2.2f, "Y Coordinates\n Up/Down\n Make sure you put a ''f'' at the end of the number.");
-            tvScaleZ = cfg.Bind("Options", "TV Scale Z", 0.5f, "Z Coordinates\n Front/Back\n Make sure you put a ''f'' at the end of the number.");
+            tvScaleX = cfg.Bind("Options", "TV Scale X", 1f, "X Coordinates\n Left/Right\nHow wide");
+            tvScaleY = cfg.Bind("Options", "TV Scale Y", 1f, "Y Coordinates\n Up/Down\nHow tall");
+            tvScaleZ = cfg.Bind("Options", "TV Scale Z", 1f, "Z Coordinates\n Front/Back\nHow long");
             configBiggerInteractRadius = cfg.Bind("Accessibility", "Bigger Interact Radius", true, "You can interact with the TV by just looking at it if you're close enough, rather than only the bottom right corner.");
         }
     }
