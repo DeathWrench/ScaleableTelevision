@@ -1,8 +1,12 @@
-# v1.0.12
--Revert scaling the TelevisionMesh since it's too much of a hassle fix everything else. Scales TelevisionContainer.
+# v1.1.1
+- Removed a v; the mod works again.
+
+# v1.1.0
+- Revert mumbo jumbo
 
 # v1.0.11
 ![Never released](https://raw.githubusercontent.com/DeathWrench/deathwrench.github.io/main/Junk/sussyfist.png)
+- https://github.com/DeathWrench/ScaleableTelevision/commit/bea3ce810b2cf906727f4206746442d2607003a2
 
 # v1.0.10
 - Fix more stuff
