@@ -1,3 +1,8 @@
+# v2.0.0
+- Re-add mumbo jumbo (This fixes the green thing)
+- Put the v in the right spot.
+- Add config options for adjusting the TV audio falloff radius.
+
 # v1.1.1
 - Removed a v; the mod works again.
 
