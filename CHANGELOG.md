@@ -1,3 +1,6 @@
+# v2.0.1
+- Try to fix interaction radius when tvScaleZ value is set higher than 1
+
 # v2.0.0
 - Re-add mumbo jumbo (This fixes the green thing)
 - Put the v in the right spot.
