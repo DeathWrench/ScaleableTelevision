@@ -10,7 +10,7 @@ namespace DeathWrench.ScaleableTelevision
     {
         public const string PLUGIN_GUID = "DeathWrench.ScaleableTelevision";
         public const string PLUGIN_NAME = "\u200bScaleableTelevision";
-        public const string PLUGIN_VERSION = "2.0.0";
+        public const string PLUGIN_VERSION = "2.0.1";
         static new GameObject? gameObject;
         void Awake()
         {
@@ -36,7 +36,7 @@ namespace DeathWrench.ScaleableTelevision
                         audioSource.minDistance != ConfigManager.audioSourceMinDistance.Value ||
                         audioSource.maxDistance != ConfigManager.audioSourceMaxDistance.Value ||
                         (cube.transform.localScale != new Vector3(ConfigManager.tvScaleY.Value * 1f, ConfigManager.tvScaleX.Value * 1.1f, 1f) && ConfigManager.configBiggerInteractRadius.Value) ||
-                        (cube.transform.localScale != new Vector3(ConfigManager.tvScaleY.Value * 0.2601791f, ConfigManager.tvScaleY.Value * 0.405167f, 0.1014986f) && !ConfigManager.configBiggerInteractRadius.Value))
+                        (cube.transform.localScale != new Vector3(ConfigManager.tvScaleY.Value * 0.2601791f, ConfigManager.tvScaleY.Value * 0.405167f, ConfigManager.tvScaleZ.Value * 0.1014986f) && !ConfigManager.configBiggerInteractRadius.Value))
                     {
                         Patchez.PostFix_adjustTVScale(trigger);
                     }
@@ -97,7 +97,7 @@ namespace DeathWrench.ScaleableTelevision
                     cube.transform.localScale = new Vector3(
                         ConfigManager.tvScaleY.Value * 0.2601791f,
                         ConfigManager.tvScaleY.Value * 0.405167f,
-                        0.1014986f
+                        ConfigManager.tvScaleZ.Value * 0.1014986f
                     );
                 }
                 else
